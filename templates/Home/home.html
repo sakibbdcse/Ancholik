@@ -27,21 +27,24 @@
  <div class="col-lg-9">
     <div class="slider-area pt-sm-30 pt-xs-30">
         <div class="slider-active owl-carousel">
-            <!-- Begin Single Slide Area -->
-            <div class="single-slide align-center-left animation-style-02 bg-4">
-                <div class="slider-progress"></div>
-                <div class="slider-content">
-                    <h5>Sale Offer <span>-20% Off</span> This Week</h5>
-                    <h2>Chamcham Galaxy S9 | S9+</h2>
-                    <h3>Starting at <span>$589.00</span></h3>
-                    <div class="default-btn slide-btn">
-                        <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+            {% for heroSlider in HeroSlider %}
+                <!-- Begin Single Slide Area -->
+                <div class="single-slide align-center-left animation-style-02 bg-4" style="background-image: url('{{ heroSlider.offer_image }}');">
+                    <div class="slider-progress"></div>
+                    <div class="slider-content">
+                        <h5>Sale Offer <span>{{ heroSlider.offer_name }}</span> This Week</h5> <!-- Corrected here -->
+                        <h2>{{ heroSlider.offer_title }}</h2> <!-- Corrected here -->
+                        <h3>Starting at <span>${{ heroSlider.offer_price }}</span></h3> <!-- Corrected here -->
+                        <div class="default-btn slide-btn">
+                            <a class="links" href="{{ heroSlider.offer_product_link }}">Shopping Now</a> <!-- Corrected here -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Single Slide Area End Here -->
+                <!-- Single Slide Area End Here -->
+            {% endfor %}
+
             <!-- Begin Single Slide Area -->
-            <div class="single-slide align-center-left animation-style-01 bg-5">
+            <!-- <div class="single-slide align-center-left animation-style-01 bg-5">
                 <div class="slider-progress"></div>
                 <div class="slider-content">
                     <h5>Sale Offer <span>Black Friday</span> This Week</h5>
@@ -51,10 +54,10 @@
                         <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Single Slide Area End Here -->
             <!-- Begin Single Slide Area -->
-            <div class="single-slide align-center-left animation-style-02 bg-6">
+            <!-- <div class="single-slide align-center-left animation-style-02 bg-6">
                 <div class="slider-progress"></div>
                 <div class="slider-content">
                     <h5>Sale Offer <span>-10% Off</span> This Week</h5>
@@ -64,7 +67,7 @@
                         <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Single Slide Area End Here -->
         </div>
     </div>
