@@ -4796,13 +4796,13 @@ thead {
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #ffffff;
-	background-color: #363f4d;
+	background-color: var(--def-them-color);
 	border-radius: 3px;
 	transition: all 0.3s ease-in-out;
 }
 
 .register-button:hover {
-	background: #fed700;
+	background: var(--hover-color);
 }
 
 /*----------------------------------------*/
