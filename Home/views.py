@@ -4,6 +4,11 @@ from .models import HeroSlider
 
 # Create your views here.
 def index(request):
-    AllCategory = Category.objects.all()
-    Heroslider = HeroSlider.objects.all()  
+    AllCategory = Category.objects.all()  
+    HeroSliderList = HeroSlider.objects.all() 
+    
+    # Debugging: Print offer_name for each HeroSlider
+    for hero in HeroSliderList:
+        print(hero.offer_name)  # Access each hero's offer_name
+    
     return render(request, 'Home/home.html', locals())
