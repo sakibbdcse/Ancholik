@@ -7,6 +7,7 @@ urlpatterns = [
     path('Accounts/', include('Accounts.urls')),
     path('Cart/', include('Cart.urls')),
     path('Product/', include('Product.urls')),
+    path('shop/', include('shop.urls')),
 ]
 
 from django.conf import settings
