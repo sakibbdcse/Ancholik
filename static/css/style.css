@@ -1432,9 +1432,9 @@ textarea:focus {
 .cart-quantity .add-to-cart {
 	border: none;
 	font-size: 14px;
-	color: #242424;
+	color: var(--white);
 	position: relative;
-	background: #fed700;
+	background: var(--def-them-color);
 	cursor: pointer;
 	font-weight: 500;
 	text-transform: capitalize;
