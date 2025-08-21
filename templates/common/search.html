@@ -1,0 +1,13 @@
+{% load static %}
+<form action="#" class="hm-searchbox">
+  <select class="nice-select select-search-category">
+    <option value="0">All</option>
+    {% for category in AllCategory %}
+    <option value="17">{{category.name}}</option>
+    {% endfor %}
+  </select>
+  <input type="text" placeholder="Enter your search key ..." />
+  <button class="li-btn" type="submit">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
