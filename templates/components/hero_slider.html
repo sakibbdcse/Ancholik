@@ -1,0 +1,35 @@
+{% load static %}
+<div class="slider-area pt-sm-30 pt-xs-30">
+  <div class="slider-active owl-carousel">
+    {% for hero in HeroSliderList %}
+    <!-- Begin Single Slide Area -->
+    <div class="single-slide animation-style-02 bg-4 d-flex align-items-center">
+      <div class="row w-100 align-items-center">
+        <!-- Left Column -->
+        <div class="col-md-6">
+          <div class="slider-content">
+            <h5>Sale Offer <span>{{ hero.offer_name }}</span> This Week</h5>
+            <h2>{{ hero.offer_title }}</h2>
+            <h3>Starting at <span>${{ hero.offer_price }}</span></h3>
+            <div class="default-btn slide-btn">
+              <a class="links" href="{{ hero.offer_product_link }}">
+                Shopping Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <img
+            class="img-fluid"
+            src="/static/images/slider/Mangoes.png"
+            alt="Slider Image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Single Slide Area End Here -->
+    {% endfor %}
+  </div>
+</div>
