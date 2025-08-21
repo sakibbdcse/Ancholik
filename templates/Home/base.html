@@ -122,18 +122,7 @@
               <!-- Begin Header Middle Right Area -->
               <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                 <!-- Begin Header Middle Searchbox Area -->
-                <form action="#" class="hm-searchbox">
-                  <select class="nice-select select-search-category">
-                    <option value="0">All</option>
-                    {% for category in AllCategory %}
-                    <option value="17">{{category.name}}</option>
-                    {% endfor %}
-                  </select>
-                  <input type="text" placeholder="Enter your search key ..." />
-                  <button class="li-btn" type="submit">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </form>
+                {% include 'common/search.html' %}
                 <!-- Header Middle Searchbox Area End Here -->
                 <!-- Begin Header Middle Right Area -->
                 <div class="header-middle-right">
