@@ -6,3 +6,4 @@ from .models import HeroSlider
 def index(request):
     HeroSliderList = HeroSlider.objects.all() 
     return render(request, 'Home/home.html', locals())
+# another function
